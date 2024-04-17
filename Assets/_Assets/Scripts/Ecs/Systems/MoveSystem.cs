@@ -10,7 +10,6 @@ namespace _Assets.Scripts.Ecs.Systems
     [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(MoveSystem))]
     public sealed class MoveSystem : UpdateSystem
     {
-        public World World { get; set; }
         private Filter _moveFilter;
 
 
