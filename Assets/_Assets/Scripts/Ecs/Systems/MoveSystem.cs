@@ -19,12 +19,16 @@ namespace _Assets.Scripts.Ecs.Systems
         public override void OnUpdate(float deltaTime)
         {
             _moveFilter = World.Filter.With<MoveComponent>().Build();
+
             foreach (var entity in _moveFilter)
             {
-                ref var move = ref entity.GetComponent<MoveComponent>();
-                move.transform.position += new Vector3(move.directionX, move.directionY, move.directionZ) *
-                                           move.speed *
-                                           deltaTime;
+                var move = entity.GetComponent<MoveComponent>();
+
+                var moveX = Mathf.Clamp(move.directionX, -1, 1);
+                var moveY = Mathf.Clamp(move.directionY, -1, 1);
+                var moveZ = Mathf.Clamp(move.directionZ, -1, 1);
+
+                move.transform.position += new Vector3(moveX, moveY, moveZ) * move.speed * deltaTime;
             }
         }
     }
