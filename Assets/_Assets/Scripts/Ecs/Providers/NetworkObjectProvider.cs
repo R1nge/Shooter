@@ -9,7 +9,8 @@ namespace _Assets.Scripts.Ecs.Providers
     {
         private void Start()
         {
-           Entity.GetComponent<NetworkComponent>().netId = NetworkManager.Singleton.LocalClientId; 
+           Entity.GetComponent<NetworkComponent>().netId = NetworkManager.Singleton.LocalClientId;
+           Entity.GetComponent<NetworkComponent>().isOwner = NetworkManager.Singleton.LocalClientId == GetComponent<NetworkObject>().OwnerClientId;
         }
     }
 }

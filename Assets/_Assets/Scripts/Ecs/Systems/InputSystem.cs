@@ -1,6 +1,5 @@
 ﻿using _Assets.Scripts.Ecs.Components;
 using Scellecs.Morpeh.Systems;
-using Unity.Netcode;
 using UnityEngine;
 
 namespace _Assets.Scripts.Ecs.Systems
@@ -22,7 +21,7 @@ namespace _Assets.Scripts.Ecs.Systems
             _inputFilter = World.Filter.With<InputComponent>().With<NetworkComponent>().With<MoveComponent>().Build();
             foreach (var entity in _inputFilter)
             {
-                if (NetworkManager.Singleton.LocalClientId == entity.GetComponent<NetworkComponent>().netId)
+                if (entity.GetComponent<NetworkComponent>().isOwner)
                 {
                     Debug.Log("Update Input");
                     ref var inputComponent = ref entity.GetComponent<InputComponent>();

@@ -7,5 +7,6 @@ namespace _Assets.Scripts.Ecs.Components
     public struct NetworkComponent : IComponent
     {
         public ulong netId;
+        public bool isOwner;
     }
 }
