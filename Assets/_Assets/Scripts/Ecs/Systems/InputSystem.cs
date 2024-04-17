@@ -25,13 +25,13 @@ namespace _Assets.Scripts.Ecs.Systems
                 {
                     ref var inputComponent = ref entity.GetComponent<InputComponent>();
                     inputComponent.directionX = Input.GetAxis("Horizontal");
-                    inputComponent.directionY = Input.GetAxis("Vertical");
+                    inputComponent.directionZ = Input.GetAxis("Vertical");
                     inputComponent.jump = Input.GetKeyDown(KeyCode.Space);
                     inputComponent.shoot = Input.GetMouseButton(0);
                     
                     ref var moveComponent = ref entity.GetComponent<MoveComponent>();
                     moveComponent.directionX = inputComponent.directionX;
-                    moveComponent.directionY = inputComponent.directionY;
+                    moveComponent.directionZ = inputComponent.directionZ;
                 }
             }
         }

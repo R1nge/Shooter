@@ -7,7 +7,7 @@ namespace _Assets.Scripts.Ecs.Components
     public struct InputComponent : IComponent
     {
         public float directionX;
-        public float directionY;
+        public float directionZ;
         public bool shoot;
         public bool jump;
     }
