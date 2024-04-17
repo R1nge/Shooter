@@ -26,6 +26,8 @@ namespace _Assets.Scripts.Ecs.Systems
                     ref var inputComponent = ref entity.GetComponent<InputComponent>();
                     inputComponent.directionX = Input.GetAxis("Horizontal");
                     inputComponent.directionZ = Input.GetAxis("Vertical");
+                    inputComponent.mouseX = Input.GetAxis("Mouse X");
+                    inputComponent.mouseY = -Input.GetAxis("Mouse Y");
                     inputComponent.jump = Input.GetKeyDown(KeyCode.Space);
                     inputComponent.shoot = Input.GetMouseButton(0);
                     

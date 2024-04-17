@@ -8,6 +8,8 @@ namespace _Assets.Scripts.Ecs.Components
     {
         public float directionX;
         public float directionZ;
+        public float mouseX;
+        public float mouseY;
         public bool shoot;
         public bool jump;
     }
