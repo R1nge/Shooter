@@ -1,9 +1,7 @@
 using _Assets.Scripts.Configs;
-using _Assets.Scripts.Services.Yandex;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
-using YG;
 
 namespace _Assets.Scripts.CompositionRoot
 {
