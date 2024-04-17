@@ -23,7 +23,6 @@ namespace _Assets.Scripts.Ecs.Systems
             {
                 if (entity.GetComponent<NetworkComponent>().isOwner)
                 {
-                    Debug.Log("Update Input");
                     ref var inputComponent = ref entity.GetComponent<InputComponent>();
                     inputComponent.directionX = Input.GetAxis("Horizontal");
                     inputComponent.directionY = Input.GetAxis("Vertical");

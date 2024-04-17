@@ -1,6 +1,5 @@
 ﻿using _Assets.Scripts.Ecs.Components;
 using Scellecs.Morpeh.Systems;
-using Unity.Netcode;
 using UnityEngine;
 
 namespace _Assets.Scripts.Ecs.Systems
@@ -19,20 +18,14 @@ namespace _Assets.Scripts.Ecs.Systems
 
         public override void OnUpdate(float deltaTime)
         {
-            if (NetworkManager.Singleton.IsServer)
+            _moveFilter = World.Filter.With<MoveComponent>().Build();
+            foreach (var entity in _moveFilter)
             {
-                _moveFilter = World.Filter.With<MoveComponent>().Build();
-                foreach (var entity in _moveFilter)
-                {
-                    ref var move = ref entity.GetComponent<MoveComponent>();
-                    move.transform.position += new Vector3(move.directionX, move.directionY, move.directionZ) *
-                                               move.speed *
-                                               deltaTime;
-
-                    Debug.Log("MoveSystem: " + move.transform.position);
-                }
+                ref var move = ref entity.GetComponent<MoveComponent>();
+                move.transform.position += new Vector3(move.directionX, move.directionY, move.directionZ) *
+                                           move.speed *
+                                           deltaTime;
             }
         }
-
     }
 }
