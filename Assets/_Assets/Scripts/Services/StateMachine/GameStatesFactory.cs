@@ -1,7 +1,6 @@
 ﻿using System;
 using _Assets.Scripts.Services.StateMachine.States;
 using _Assets.Scripts.Services.UIs.StateMachine;
-using _Assets.Scripts.Services.Yandex;
 
 namespace _Assets.Scripts.Services.StateMachine
 {

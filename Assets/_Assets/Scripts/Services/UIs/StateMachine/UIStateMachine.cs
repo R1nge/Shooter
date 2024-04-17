@@ -1,4 +1,6 @@
-﻿namespace _Assets.Scripts.Services.UIs.StateMachine
+﻿using System.Collections.Generic;
+
+namespace _Assets.Scripts.Services.UIs.StateMachine
 {
     public class UIStateMachine : GenericAsyncStateMachine<UIStateType, IAsyncState>
     {

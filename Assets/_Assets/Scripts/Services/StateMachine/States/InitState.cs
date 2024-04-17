@@ -1,5 +1,4 @@
 ﻿using _Assets.Scripts.Services.UIs.StateMachine;
-using _Assets.Scripts.Services.Yandex;
 using Cysharp.Threading.Tasks;
 
 namespace _Assets.Scripts.Services.StateMachine.States
