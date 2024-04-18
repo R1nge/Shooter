@@ -30,10 +30,9 @@ namespace _Assets.Scripts.Ecs.Systems
                 var moveY = Mathf.Clamp(move.directionY, -1, 1);
                 var moveZ = Mathf.Clamp(input.directionZ, -1, 1);
                 var direction = new Vector3(moveX, moveY, moveZ);
-
-                var rotation = entity.GetComponent<PlayerRotationComponent>();
-                var forward = rotation.camera.forward;
-                var right = rotation.camera.right;
+                
+                var forward = move.characterController.transform.TransformDirection(Vector3.forward);
+                var right = move.characterController.transform.TransformDirection(Vector3.right);
                 var facingDirection = forward * direction.z + right * direction.x;
 
                 move.characterController.Move(facingDirection * move.speed * deltaTime);

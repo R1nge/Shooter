@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 2758408543954045462}
   - component: {fileID: 6434138228797426250}
   - component: {fileID: 9139943287170915751}
+  - component: {fileID: 3094520979356435724}
   m_Layer: 0
   m_Name: MoveProvider
   m_TagString: Untagged
@@ -397,3 +398,18 @@ MonoBehaviour:
     directionX: 0
     directionY: 0
     directionZ: 0
+--- !u!114 &3094520979356435724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173557355185135165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4f96dedfda48a98c760da19e931a23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedData:
+    characterController: {fileID: 8368409715487056181}
+    gravity: -9.81

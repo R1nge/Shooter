@@ -360,7 +360,9 @@ MonoBehaviour:
     system: {fileID: 11400000, guid: e3f8e7e230ead094fa0176279967bc06, type: 2}
   - enabled: 1
     system: {fileID: 11400000, guid: 191bea3ddba9fd74b826d9b01a404172, type: 2}
-  fixedUpdateSystems: []
+  fixedUpdateSystems:
+  - enabled: 1
+    system: {fileID: 11400000, guid: bee67e4f2714f9a4799f4388085fbe03, type: 2}
   lateUpdateSystems: []
   cleanupSystems: []
 --- !u!4 &1527779661
