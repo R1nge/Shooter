@@ -63,3 +63,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiConfig: {fileID: 11400000, guid: c01c0ec4a5855f641b051cf97763b193, type: 2}
+  characterConfig: {fileID: 11400000, guid: bdba5c402995c5d4786992cd0d6e8042, type: 2}

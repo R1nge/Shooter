@@ -413,22 +413,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     characterController: {fileID: 8368409715487056181}
-    gravity: -9.81
+    gravity: -98.1
     animationCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
         value: 0
-        inSlope: 0
-        outSlope: 0
+        inSlope: 2
+        outSlope: 2
         tangentMode: 0
         weightedMode: 0
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.97083336
-        value: 10.007075
+        time: 1
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -453,8 +453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     characterController: {fileID: 8368409715487056181}
-    jumpForce: 100
-    jumpDuration: 1
+    jumpForce: 50
+    jumpDuration: 0.25
     currentJumpTime: 0
     animationCurve:
       serializedVersion: 2
