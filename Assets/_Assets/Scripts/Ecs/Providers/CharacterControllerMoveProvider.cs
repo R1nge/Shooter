@@ -3,7 +3,8 @@ using Scellecs.Morpeh.Providers;
 
 namespace _Assets.Scripts.Ecs.Providers
 {
-    public class MoveProvider : MonoProvider<TransformMoveComponent>
+    public class CharacterControllerMoveProvider : MonoProvider<CharacterControllerMoveComponent>
     {
+        
     }
 }

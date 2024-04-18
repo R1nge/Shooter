@@ -206,13 +206,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6038010789623851229}
+  - component: {fileID: 8368409715487056181}
   - component: {fileID: 762507335703443896}
   - component: {fileID: 5399603540386279631}
-  - component: {fileID: 7336590618719182128}
   - component: {fileID: 5193246161034879003}
   - component: {fileID: 3486945761504793683}
   - component: {fileID: 2758408543954045462}
   - component: {fileID: 6434138228797426250}
+  - component: {fileID: 9139943287170915751}
   m_Layer: 0
   m_Name: MoveProvider
   m_TagString: Untagged
@@ -237,6 +238,32 @@ Transform:
   - {fileID: 2081796247136686004}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &8368409715487056181
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173557355185135165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &762507335703443896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,24 +316,6 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &7336590618719182128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8173557355185135165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce06144c960f408c87c3f2c26f1561e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializedData:
-    transform: {fileID: 6038010789623851229}
-    speed: 10
-    directionX: 0
-    directionY: 0
-    directionZ: 0
 --- !u!114 &5193246161034879003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,3 +379,21 @@ MonoBehaviour:
     transform: {fileID: 6038010789623851229}
     camera: {fileID: 2081796247136686004}
     rotationX: 0
+--- !u!114 &9139943287170915751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173557355185135165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 177517ad400a4439b036602596e8695b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedData:
+    characterController: {fileID: 8368409715487056181}
+    speed: 10
+    directionX: 0
+    directionY: 0
+    directionZ: 0

@@ -18,11 +18,11 @@ namespace _Assets.Scripts.Ecs.Systems
 
         public override void OnUpdate(float deltaTime)
         {
-            _moveFilter = World.Filter.With<MoveComponent>().Build();
+            _moveFilter = World.Filter.With<TransformMoveComponent>().Without<PlayerComponent>().Build();
 
             foreach (var entity in _moveFilter)
             {
-                var move = entity.GetComponent<MoveComponent>();
+                var move = entity.GetComponent<TransformMoveComponent>();
 
                 var moveX = Mathf.Clamp(move.directionX, -1, 1);
                 var moveY = Mathf.Clamp(move.directionY, -1, 1);

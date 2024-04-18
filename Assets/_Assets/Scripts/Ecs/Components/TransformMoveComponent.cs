@@ -5,7 +5,7 @@ using UnityEngine;
 namespace _Assets.Scripts.Ecs.Components
 {
     [Serializable]
-    public struct MoveComponent : IComponent
+    public struct TransformMoveComponent : IComponent
     {
         public Transform transform;
         public float speed;

@@ -18,7 +18,7 @@ namespace _Assets.Scripts.Ecs.Systems
 
         public override void OnUpdate(float deltaTime)
         {
-            _inputFilter = World.Filter.With<InputComponent>().With<NetworkComponent>().With<MoveComponent>().Build();
+            _inputFilter = World.Filter.With<InputComponent>().With<NetworkComponent>().Build();
             foreach (var entity in _inputFilter)
             {
                 if (entity.GetComponent<NetworkComponent>().isOwner)
@@ -30,10 +30,6 @@ namespace _Assets.Scripts.Ecs.Systems
                     inputComponent.mouseY = -Input.GetAxis("Mouse Y");
                     inputComponent.jump = Input.GetKeyDown(KeyCode.Space);
                     inputComponent.shoot = Input.GetMouseButton(0);
-                    
-                    ref var moveComponent = ref entity.GetComponent<MoveComponent>();
-                    moveComponent.directionX = inputComponent.directionX;
-                    moveComponent.directionZ = inputComponent.directionZ;
                 }
             }
         }
