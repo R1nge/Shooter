@@ -35,7 +35,9 @@ namespace _Assets.Scripts.Ecs.Systems
 
                 if (jumpComponent.jumped && jumpComponent.currentJumpTime < jumpComponent.jumpDuration)
                 {
-                    moveComponent.directionY = jumpComponent.jumpForce * deltaTime;
+                    var force = jumpComponent.animationCurve.Evaluate(jumpComponent.currentJumpTime /
+                                                                      jumpComponent.jumpDuration);
+                    moveComponent.directionY = force * jumpComponent.jumpForce * deltaTime;
                     jumpComponent.currentJumpTime += deltaTime;
                 }
                 else

@@ -9,5 +9,7 @@ namespace _Assets.Scripts.Ecs.Components
     {
         public CharacterController characterController;
         public float gravity;
+        public AnimationCurve animationCurve;
+        public float currentTime;
     }
 }

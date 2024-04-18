@@ -11,6 +11,7 @@ namespace _Assets.Scripts.Ecs.Components
         public float jumpForce;
         public float jumpDuration;
         public float currentJumpTime;
+        public AnimationCurve animationCurve;
         public bool jumped;
     }
 }

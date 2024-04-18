@@ -23,9 +23,20 @@ namespace _Assets.Scripts.Ecs.Systems
 
             foreach (var entity in _filter)
             {
-                var gravityComponent = entity.GetComponent<CharacterControllerGravityComponent>();
+                ref var gravityComponent = ref entity.GetComponent<CharacterControllerGravityComponent>();
                 ref var characterControllerMoveComponent = ref entity.GetComponent<CharacterControllerMoveComponent>();
-                characterControllerMoveComponent.directionY -= -gravityComponent.gravity * deltaTime;
+                if (!gravityComponent.characterController.isGrounded)
+                {
+                    var gravity =
+                        gravityComponent.animationCurve.Evaluate(gravityComponent.currentTime /
+                                                                 gravityComponent.animationCurve.length);
+                    gravityComponent.currentTime += deltaTime;
+                    characterControllerMoveComponent.directionY = gravity * gravityComponent.gravity * deltaTime;
+                }
+                else
+                {
+                    gravityComponent.currentTime = 0f;
+                }
             }
         }
     }
