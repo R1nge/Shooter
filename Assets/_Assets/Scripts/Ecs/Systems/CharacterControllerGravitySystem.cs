@@ -25,7 +25,7 @@ namespace _Assets.Scripts.Ecs.Systems
             {
                 var gravityComponent = entity.GetComponent<CharacterControllerGravityComponent>();
                 ref var characterControllerMoveComponent = ref entity.GetComponent<CharacterControllerMoveComponent>();
-                characterControllerMoveComponent.directionY = gravityComponent.gravity * deltaTime;
+                characterControllerMoveComponent.directionY -= -gravityComponent.gravity * deltaTime;
             }
         }
     }
