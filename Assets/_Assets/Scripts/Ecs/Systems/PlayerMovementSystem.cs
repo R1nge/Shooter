@@ -27,13 +27,14 @@ namespace _Assets.Scripts.Ecs.Systems
                 var input = entity.GetComponent<InputComponent>();
                 var move = entity.GetComponent<CharacterControllerMoveComponent>();
                 var moveX = Mathf.Clamp(input.directionX, -1, 1);
-                var moveY = Mathf.Clamp(move.directionY, -1, 1);
+                var moveY = move.directionY;
                 var moveZ = Mathf.Clamp(input.directionZ, -1, 1);
                 var direction = new Vector3(moveX, moveY, moveZ);
                 
                 var forward = move.characterController.transform.TransformDirection(Vector3.forward);
                 var right = move.characterController.transform.TransformDirection(Vector3.right);
                 var facingDirection = forward * direction.z + right * direction.x;
+                facingDirection.y = moveY;
 
                 move.characterController.Move(facingDirection * move.speed * deltaTime);
             }

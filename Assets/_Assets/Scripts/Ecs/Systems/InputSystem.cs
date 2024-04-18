@@ -28,7 +28,7 @@ namespace _Assets.Scripts.Ecs.Systems
                     inputComponent.directionZ = Input.GetAxis("Vertical");
                     inputComponent.mouseX = Input.GetAxis("Mouse X");
                     inputComponent.mouseY = -Input.GetAxis("Mouse Y");
-                    inputComponent.jump = Input.GetKeyDown(KeyCode.Space);
+                    inputComponent.jump = Input.GetKey(KeyCode.Space);
                     inputComponent.shoot = Input.GetMouseButton(0);
                 }
             }

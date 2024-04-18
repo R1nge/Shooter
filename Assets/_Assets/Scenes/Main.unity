@@ -332,6 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527779661}
   - component: {fileID: 1527779660}
+  - component: {fileID: 1527779662}
   m_Layer: 0
   m_Name: ECS_Injectable_Installer
   m_TagString: Untagged
@@ -359,7 +360,7 @@ MonoBehaviour:
   - enabled: 1
     system: {fileID: 11400000, guid: e3f8e7e230ead094fa0176279967bc06, type: 2}
   - enabled: 1
-    system: {fileID: 11400000, guid: 191bea3ddba9fd74b826d9b01a404172, type: 2}
+    system: {fileID: 11400000, guid: 284285a55e1b9f54ca2e84fb1c614145, type: 2}
   fixedUpdateSystems:
   - enabled: 1
     system: {fileID: 11400000, guid: bee67e4f2714f9a4799f4388085fbe03, type: 2}
@@ -380,6 +381,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527779662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527779659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca76b94a8c5539a408f202e2a482b5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: 1
+  initializers: []
+  updateSystems:
+  - enabled: 1
+    system: {fileID: 11400000, guid: 191bea3ddba9fd74b826d9b01a404172, type: 2}
+  fixedUpdateSystems: []
+  lateUpdateSystems: []
+  cleanupSystems: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
