@@ -19,7 +19,7 @@ namespace _Assets.Scripts.Services.Factories
 
         public NetworkObject Create(Vector3 position, ulong owner)
         {
-            var player = _objectResolver.Instantiate(_configProvider.CharacterConfig.PlayerPrefab);
+            var player = _objectResolver.Instantiate(_configProvider.CharacterConfig.PlayerPrefab, position, Quaternion.identity);
             player.SpawnWithOwnership(owner);
             return player;
         }
