@@ -6,7 +6,7 @@ using UnityEngine;
 namespace _Assets.Scripts.Ecs.Systems
 {
     [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(CharacterControllerGravitySystem))]
-    public sealed class CharacterControllerGravitySystem : FixedUpdateSystem
+    public sealed class CharacterControllerGravitySystem : UpdateSystem
     {
         private Filter _filter;
 
