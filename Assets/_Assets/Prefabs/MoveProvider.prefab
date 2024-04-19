@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 9139943287170915751}
   - component: {fileID: 3094520979356435724}
   - component: {fileID: 1090348623804949954}
+  - component: {fileID: 7610034369626141935}
   m_Layer: 0
   m_Name: MoveProvider
   m_TagString: Untagged
@@ -453,8 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     characterController: {fileID: 8368409715487056181}
-    jumpForce: 50
-    jumpDuration: 0.25
+    jumpForce: 100
+    jumpDuration: 0.5
     currentJumpTime: 0
     animationCurve:
       serializedVersion: 2
@@ -481,3 +482,22 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     jumped: 0
+--- !u!114 &7610034369626141935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173557355185135165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae896881a9ac4862acd2ff0a03b897f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
